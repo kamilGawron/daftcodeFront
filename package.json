@@ -7,7 +7,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "deploy": "gh-pages -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open"
   },
   "author": "KamilGawron",
   "license": "ISC",
@@ -25,7 +26,8 @@
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "browserslist": [
     "defaults"

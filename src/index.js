@@ -1,4 +1,9 @@
-import fun from './script';
-import './styles/style.sass';
+import header from './header';
+import { createBrand, createOptions, createMobileMenuBtn } from './nav';
 
-fun();
+import './styles/style.scss';
+
+header();
+createBrand();
+createOptions();
+createMobileMenuBtn();
