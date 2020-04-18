@@ -1,9 +1,9 @@
 .nav{
     height: 90px;
-    width: 80%;
+    width: 70%;
     position: absolute;
     top:0;
-    left: 10%;
+    left: 15%;
     display: flex;
     justify-content: center;
     @media all and (max-width:$breakpoint-desktops){

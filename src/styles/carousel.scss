@@ -1,0 +1,41 @@
+.carousel{
+   background-color: $darkNavy;
+   position: relative;
+   width: 100% ;
+  margin-top:-2px;
+  padding: 50px 0 50px 0;
+   &__wrapper{
+       width: 70%;
+       margin-left: 15%;
+       overflow: hidden;
+   }
+}
+.swiper-container {
+    width: 110%;
+}
+.swiper-slide{
+    padding:0;
+    img{
+        width: 268px;
+    }
+}
+.swiper-button-prev,.swiper-button-next{
+    border: 1px solid $lightNavColor !important;
+    position: absolute;
+    box-shadow: none;
+    height:48px;
+    width:48px;
+
+    &:after{
+        content: '';
+    }
+    &:hover{
+        border: 1px solid $lightNavColor;
+        outline:none;
+    }
+}.swiper-button-prev{
+    left: 5%;
+}.swiper-button-next{
+    right:  5%;
+    
+}

@@ -16,6 +16,8 @@
   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 
 <body>
@@ -32,11 +34,33 @@
     </ul>
     <div id="nav__brand" class="nav__brand"></div>
     <ul id="nav__options" class="nav__options">
-      <!-- <li class="nav__options__account"></li>
-      <li class="nav__options__basket"></li> -->
     </ul>
   </nav>
-  </section>
+  <div class="carousel">
+    <div class="carousel__wrapper">
+      <div class="swiper-container">
+        <div id="swiper-wrapper" class="swiper-wrapper">
+        </div>
+      </div>
+    </div>
+    <div id="swiper-button-prev" class="swiper-button-prev"></div>
+    <div id="swiper-button-next" class="swiper-button-next"></div>
+  </div>
+  <div class="content">
+   <div class="content__header"><h3 class="content__title">New Arrivals</h3></div>
+    <div id="content__items" class="content__items">
+      <div  class="row">
+          <div class="col-lg-3 content__item">x</div>
+          <div class="col-lg-3 content__item">x</div>
+          <div class="col-lg-3 content__item">x</div>
+          <div class="col-lg-3 content__item">x</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
 </body>
 
 </html>

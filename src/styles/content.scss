@@ -1,0 +1,23 @@
+.content{
+    width:70%;
+    margin-left:15%;
+    border:1px solid red;
+    .row{
+        width:100%;
+        margin: 0 auto;
+    }
+    &__header{
+        height:256px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:4.8rem;
+        font-weight:bold;
+    }
+    &__items{
+
+    }
+    &__item{
+        border:1px solid red;
+    }
+}
