@@ -1,5 +1,28 @@
 .header{
-    img{
+    width:100%;
+    position:relative;
+    bottom:90px;
+    .header-bg{
         width: 100%;
+        @media all and (max-width:$breakpoint-phones){
+        min-height:523px;
+        }
+    }
+    .mobile-summer-image-wrapper{
+        display:none;
+        position: absolute;
+        z-index:1000;
+        top:196px;
+        left:0;
+        width:100%;
+        text-align:center;
+        @media all and (max-width:$breakpoint-phones){
+            display: block;
+        }
+
+    }
+    .mobile-summer-image{
+        width:272px;
+        height:230px;
     }
 }

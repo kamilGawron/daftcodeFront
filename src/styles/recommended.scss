@@ -1,0 +1,36 @@
+.recommended{
+    &__left{
+        text-align:center;
+        img{
+            max-width:100%;
+            @media all and(max-width:$breakpoint-phones){
+                max-width:95%;
+            }
+        }
+    }
+    &__right{
+        &__upper{
+            text-align:center;
+            margin-bottom:9px;
+            img{
+                max-width:100%;
+                @media all and(max-width:$breakpoint-phones){
+                    max-width:95%;
+                }
+            }
+            @media all and(max-width:$breakpoint-phones){
+                margin-bottom:0px;
+            }
+        }
+        &__down{
+            text-align:center;
+            img{
+                max-width:100%;
+                @media all and(max-width:$breakpoint-phones){
+                    max-width:95%;
+                }
+            }
+        }
+    }
+
+}

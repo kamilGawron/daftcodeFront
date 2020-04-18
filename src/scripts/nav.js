@@ -1,7 +1,7 @@
-import logoImg from './assets/logo-zonex.png';
-import accountImg from './assets/kz-user@2x.png';
-import basketImg from './assets/kz-bag@2x.png';
-import menuImg from './assets/menu-btn.png';
+import logoImg from '../assets/logo-zonex.png';
+import accountImg from '../assets/kz-user@2x.png';
+import basketImg from '../assets/kz-bag@2x.png';
+import menuImg from '../assets/menu-btn.png';
 
 export const createMobileMenuBtn = function () {
     const btnWrapper = document.getElementById('nav__mobile');

@@ -2,16 +2,30 @@
    background-color: $darkNavy;
    position: relative;
    width: 100% ;
-  margin-top:-2px;
+    margin-top:-92px;
   padding: 50px 0 50px 0;
    &__wrapper{
-       width: 70%;
-       margin-left: 15%;
+       width: 100%;
        overflow: hidden;
    }
+    @media all and (max-width:$breakpoint-phones){
+       padding: 50px 0 40px 0;
+    }
 }
 .swiper-container {
-    width: 110%;
+    width: 108%;
+    @media all and (max-width:1600px){
+        width: 80%;
+    }
+     @media all and (max-width:$breakpoint-tablets){
+        display:block;
+        width: 115%;
+    }
+    @media all and (max-width:$breakpoint-phones){
+        display:block;
+        width: 150%;
+        margin-left:10px;
+    }
 }
 .swiper-slide{
     padding:0;
@@ -33,9 +47,27 @@
         border: 1px solid $lightNavColor;
         outline:none;
     }
+    @media all and (max-width:$breakpoint-tablets){
+        display:none;
+    }
+     
 }.swiper-button-prev{
     left: 5%;
+    @media all and (max-width:1600px){
+        left: 10px;
+    }
 }.swiper-button-next{
     right:  5%;
+    @media all and (max-width:1600px){
+        right: 10px;
+    }
     
+}
+.swiper-scrollbar{
+    height:10px;
+    display: none;
+    @media all and (max-width:$breakpoint-tablets){
+        display:block;
+        margin-top:20px;
+    }
 }

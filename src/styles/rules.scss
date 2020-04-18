@@ -9,3 +9,12 @@ $breakpoint-large: 1200px;
 html{
     font-size: 10px;
 }
+
+.container{
+    max-width:1326px;
+    padding:0;
+    overflow:hidden;
+}
+.container-fluid{
+    padding:0;
+}

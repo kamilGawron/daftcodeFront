@@ -1,11 +1,5 @@
+
 .content{
-    width:70%;
-    margin-left:15%;
-    border:1px solid red;
-    .row{
-        width:100%;
-        margin: 0 auto;
-    }
     &__header{
         height:256px;
         display:flex;
@@ -15,9 +9,44 @@
         font-weight:bold;
     }
     &__items{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align:center;
+        @media all and (max-width: $breakpoint-phones) { 
+            .row{
+            padding: 15px;            
+        }
 
+        }
+       
     }
     &__item{
-        border:1px solid red;
+        padding:10px;
+        img{
+            max-width: 100%;
+        }
+    }
+    &__showMore{
+        text-align:center;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__button{
+            color:red;
+            width: 136px;
+            height: 48px;
+            border:2px solid $darkNavColor;
+            outline:none;
+            background-color:$lightNavColor;
+            color: $darkNavColor;
+            font-size:1.3rem;
+            transition: all .4s ease;
+            &:hover{
+                background-color:$darkNavColor;
+                color: $lightNavColor;
+            }
+        }
     }
 }

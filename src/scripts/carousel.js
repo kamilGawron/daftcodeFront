@@ -1,8 +1,8 @@
 
 import Swiper from 'swiper';
-import carouselImage from './assets/carousel-item.png'
-import prevButton from './assets/kz-long-arrow-left.png'
-import nextButton from './assets/kz-long-arrow-right.png'
+import carouselImage from '../assets/carousel-item.png'
+import prevButton from '../assets/kz-long-arrow-left.png'
+import nextButton from '../assets/kz-long-arrow-right.png'
 export default function () {
     const carouselWrapper = document.getElementById('swiper-wrapper');
     //prev btn
@@ -30,6 +30,9 @@ export default function () {
         loop: true,
         slidesPerView: 5,
         spaceBetween: 20,
+        autoplay: {
+            delay: 1500,
+          },
         breakpoints: {
             // when window width is >= 320px
             320: {
@@ -37,9 +40,9 @@ export default function () {
                 spaceBetween: 20
             },
             // when window width is >= 480px
-            480: {
-                slidesPerView: 3,
-                spaceBetween: 30
+            992: {
+                slidesPerView:3,
+                spaceBetween: 20
             },
             // when window width is >= 640px
             1400: {
@@ -56,7 +59,9 @@ export default function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
+        scrollbar: {
+            el: '.swiper-scrollbar',
+          },
 
     })
 }
