@@ -126,17 +126,6 @@ export default function () {
         colItem.appendChild(hoverInfoItem);
         rowElem.appendChild(colItem);
     });
-    // for (let i = 0; i < 8; i++) {
-    //     let colItem = document.createElement('div');
-    //     colItem.classList.add('col-6');
-    //     colItem.classList.add('col-lg-4');
-    //     colItem.classList.add('col-xl-3');
 
-    //     colItem.classList.add('content__item');
-    //     let imageElem = document.createElement('img');
-    //     imageElem.src = contentImage;
-    //     colItem.appendChild(imageElem);
-    //     rowElem.appendChild(colItem);
-    // }
     contentWrapper.appendChild(rowElem);
 }

@@ -29,6 +29,26 @@
 }
 .swiper-slide{
     padding:0;
+    position: relative;
+    &__description{
+        width: 100%;
+        position: absolute;
+        bottom: 19px;
+        padding:0 20px;
+        @media all and (max-width:$breakpoint-phones){
+            display:none;
+        }
+        &__name{
+            font-size: 1.3rem;
+            color:#454545;
+            margin-bottom: 10px;
+        }
+        &__price{
+            color:$darkNavColor;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
     img{
         width: 268px;
     }
