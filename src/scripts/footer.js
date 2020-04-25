@@ -6,6 +6,8 @@ import chevronIcon from '../assets/kz-angle-down.png'
 import paymentImg from '../assets/payment.png'
 
 export default function (){
+    const footerYearContainer = document.getElementById('footer-year');
+
     document.getElementById('twitter-img').src=twitterImage;
     document.getElementById('facebook-img').src=fbImage;
     document.getElementById('instagram-img').src=igImage;
@@ -14,4 +16,5 @@ export default function (){
     document.getElementById('currency-chevron').src=chevronIcon;
     document.getElementById('payment-image').src=paymentImg;
 
+    footerYearContainer.innerHTML = new Date().getFullYear();
 }
