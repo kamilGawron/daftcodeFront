@@ -16,19 +16,27 @@ export default function(){
             scrollToTopElem.style.bottom="45px";
         }
         window.addEventListener('scroll',()=>{
-            scrollPosition = (screenAvailHeight/2+window.scrollY)/pageHeight*100;
-            if (scrollPosition>=50){
-                scrollToTopElem.style.bottom="45px";
-            }else{
-                scrollToTopElem.style.bottom="-100px";
-            }
+            setScrollToTopElem();
+            
         })
+    })
+    window.addEventListener('newProducts',()=>{
+        setScrollToTopElem();
     })
     scrollToTopElem.onclick=()=>{
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
           });
+    }
+    function setScrollToTopElem(){
+        pageHeight=footer.offsetTop+footer.offsetHeight;
+        scrollPosition = (screenAvailHeight/2+window.scrollY)/pageHeight*100;
+        if (scrollPosition>=50){
+            scrollToTopElem.style.bottom="45px";
+        }else{
+            scrollToTopElem.style.bottom="-100px";
+        }
     }
   
 }
