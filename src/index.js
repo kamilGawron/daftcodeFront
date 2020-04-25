@@ -4,15 +4,20 @@ import carousel from './scripts/carousel';
 import createContent from './scripts/content';
 import createRecommendedItems from './scripts/recommended';
 import footer from './scripts/footer';
+import scroll from './scripts/scroll-to-top';
 import Swiper from 'swiper';
 
 import './styles/style.scss';
 
-header();
-createBrand();
-createOptions();
-createMobileMenuBtn();
-carousel();
-createContent();
-createRecommendedItems();
-footer();
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    header();
+    createBrand();
+    createOptions();
+    createMobileMenuBtn();
+    carousel();
+    createContent();
+    createRecommendedItems();
+    footer();
+    scroll();
+});
