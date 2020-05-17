@@ -1,7 +1,9 @@
 .recommended{
     &__left{
         text-align:center;
+        height: 630px;
         img{
+            height: 100%;
             max-width:100%;
             @media all and(max-width:$breakpoint-phones){
                 max-width:95%;
@@ -12,7 +14,9 @@
         &__upper{
             text-align:center;
             margin-bottom:9px;
+            height: 310px;
             img{
+               height: 310px;
                 max-width:100%;
                 @media all and(max-width:$breakpoint-phones){
                     max-width:95%;
@@ -24,8 +28,12 @@
         }
         &__down{
             text-align:center;
+            width:769px ;
+            height: 310px;
+            max-width: 100%;
+            overflow: hidden;
             img{
-                max-width:100%;
+                width:100%;
                 @media all and(max-width:$breakpoint-phones){
                     max-width:95%;
                 }
