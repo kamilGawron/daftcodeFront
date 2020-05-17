@@ -10,7 +10,8 @@ const fetchData = () => {
                 products.push({
                     name: element.brandName,
                     price: element.price.current.value,
-                    imageUrl: element.imageUrl
+                    imageUrl: element.imageUrl,
+                    currency: element.price.currency
                 })
             });
             resolve(products);

@@ -1,6 +1,5 @@
 import magnifierImage from '../assets/kz-search-space.png'
 import heartImage from '../assets/kz-heart.png'
-import products from './products'
 
 export default function (productsAPI) {
     console.log("OUTPUT: products", productsAPI)
@@ -35,7 +34,7 @@ export default function (productsAPI) {
 
     let showItemsOnPage = 8;
     let currentPage = 1;
-    const pagesCounter = Math.ceil(products().length / showItemsOnPage);
+    const pagesCounter = Math.ceil(productsAPI.length / showItemsOnPage);
 
     showMoreBtn.onclick = () => {
         showProducts(currentPage * showItemsOnPage, (++currentPage * showItemsOnPage));
@@ -47,7 +46,7 @@ export default function (productsAPI) {
     showProducts(currentPage - 1, showItemsOnPage);
     function showProducts(startIndex, endIndex) {
 
-        let elements = products().slice(startIndex, endIndex);
+        let elements = productsAPI.slice(startIndex, endIndex);
         elements.forEach(element => {
             let colItem = document.createElement('div');
             colItem.classList.add('col-6');
@@ -55,7 +54,7 @@ export default function (productsAPI) {
             colItem.classList.add('col-xl-3');
             colItem.classList.add('content__item');
             let imageElem = document.createElement('img');
-            imageElem.src = element.image;
+            imageElem.src = `http://${element.imageUrl}`;
             colItem.appendChild(imageElem);
             //element sale
             if (element.isSale) {
@@ -113,7 +112,7 @@ export default function (productsAPI) {
             //element price
             let itemPriceElem = document.createElement('div');
             itemPriceElem.classList.add('content__item__description__price');
-            itemPriceElem.innerHTML = element.price;
+            itemPriceElem.innerHTML = element.price + " " + element.currency;
             itemDescriptionItem.appendChild(itemPriceElem);
             //add elem
             colItem.appendChild(itemDescriptionItem);
