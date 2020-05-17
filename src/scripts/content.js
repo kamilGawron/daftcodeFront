@@ -2,7 +2,9 @@ import magnifierImage from '../assets/kz-search-space.png'
 import heartImage from '../assets/kz-heart.png'
 import products from './products'
 
-export default function () {
+export default function (productsAPI) {
+    console.log("OUTPUT: products", productsAPI)
+
     const contentWrapper = document.getElementById('content__items');
     // const showMoreBtn = document.getElementById('show-more-btn');
 

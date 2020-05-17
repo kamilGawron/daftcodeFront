@@ -5,11 +5,17 @@ import axios from 'axios'
 const fetchData = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(response.products);
+            const products = [];
+            response.products.forEach(element => {
+                products.push({
+                    name: element.brandName,
+                    price: element.price.current.value,
+                    imageUrl: element.imageUrl
+                })
+            });
+            resolve(products);
         }, 2000)
-        setTimeout(() => {
-            reject('err');
-        }, 1600)
+
     })
     console.log('fetch data fun');
     // axios.get('https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4209&limit=48&store=US', {
