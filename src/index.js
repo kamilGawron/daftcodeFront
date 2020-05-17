@@ -17,7 +17,7 @@ import './styles/style.scss';
 
 window.addEventListener('DOMContentLoaded', (event) => {
     fetchData().then(res => {
-        carousel();
+        carousel(res.slice(0, 10));
         createContent(res);
         createRecommendedItems();
         createOptions();

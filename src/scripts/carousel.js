@@ -1,53 +1,52 @@
 
 import Swiper from 'swiper';
-import carouselImage from '../assets/carousel-item.png'
 import prevButton from '../assets/kz-long-arrow-left.png'
 import nextButton from '../assets/kz-long-arrow-right.png'
-export default function () {
+export default function (carouselItems) {
     document.getElementById('carousel').style.visibility = 'visible';
-    const carouselItems = [
-        {
-            image: carouselImage,
-            name: 'Seersucker underwire',
-            price: 49.99,
-        }, {
-            image: carouselImage,
-            name: 'Embroidered Indian cotton beach',
-            price: 65,
-        }, {
-            image: carouselImage,
-            name: 'Cabana oversized sunglasses',
-            price: 35,
-        }, {
-            image: carouselImage,
-            name: '6" stretch eco swim trunk',
-            price: 35,
-        }, {
-            image: carouselImage,
-            name: 'Studded wrap sandals',
-            price: 22,
-        }, {
-            image: carouselImage,
-            name: 'Seersucker underwire',
-            price: 49.99,
-        }, {
-            image: carouselImage,
-            name: 'Embroidered Indian cotton beach',
-            price: 65,
-        }, {
-            image: carouselImage,
-            name: 'Cabana oversized sunglasses',
-            price: 35,
-        }, {
-            image: carouselImage,
-            name: '6" stretch eco swim trunk',
-            price: 35,
-        }, {
-            image: carouselImage,
-            name: 'Studded wrap sandals',
-            price: 22,
-        },
-    ];
+    // const carouselItems = [
+    //     {
+    //         image: carouselImage,
+    //         name: 'Seersucker underwire',
+    //         price: 49.99,
+    //     }, {
+    //         image: carouselImage,
+    //         name: 'Embroidered Indian cotton beach',
+    //         price: 65,
+    //     }, {
+    //         image: carouselImage,
+    //         name: 'Cabana oversized sunglasses',
+    //         price: 35,
+    //     }, {
+    //         image: carouselImage,
+    //         name: '6" stretch eco swim trunk',
+    //         price: 35,
+    //     }, {
+    //         image: carouselImage,
+    //         name: 'Studded wrap sandals',
+    //         price: 22,
+    //     }, {
+    //         image: carouselImage,
+    //         name: 'Seersucker underwire',
+    //         price: 49.99,
+    //     }, {
+    //         image: carouselImage,
+    //         name: 'Embroidered Indian cotton beach',
+    //         price: 65,
+    //     }, {
+    //         image: carouselImage,
+    //         name: 'Cabana oversized sunglasses',
+    //         price: 35,
+    //     }, {
+    //         image: carouselImage,
+    //         name: '6" stretch eco swim trunk',
+    //         price: 35,
+    //     }, {
+    //         image: carouselImage,
+    //         name: 'Studded wrap sandals',
+    //         price: 22,
+    //     },
+    // ];
     const carouselWrapper = document.getElementById('swiper-wrapper');
     //prev btn
     const prevBtnWrapper = document.getElementById('swiper-button-prev');
@@ -64,7 +63,7 @@ export default function () {
         let divElem = document.createElement('div');
         divElem.classList.add('swiper-slide');
         let imgElem = document.createElement('img');
-        imgElem.src = element.image;
+        imgElem.src = `http://${element.imageUrl}`;
         let descItem = document.createElement('div');
         descItem.classList.add('swiper-slide__description');
         let descItemName = document.createElement('div');
