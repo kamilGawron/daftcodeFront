@@ -26,8 +26,17 @@
     </ul>
     </div>
   </nav>
+
   <div id="header" class="header container-fluid"></div>
-  <div class="carousel">
+  <!-- loader -->
+  <div class="loader" id="loader">
+    <div class="loader__item"></div>
+    <div class="loader__desc">Loading...</div>
+  </div>
+  <!-- failed msg -->
+  <div class="failed" id="failed">Sorry, an error occurred. Try again later.</div>
+  <!-- carousel -->
+  <div class="carousel" id="carousel">
     <div class="container">
       <div class="carousel__wrapper">
         <div class="swiper-container">
@@ -42,13 +51,13 @@
   </div>
   <div class="container">
     <div class="content ">
-      <div class="content__header">
-        <h3 class="content__title">New Arrivals</h3>
+      <div class="content__header" id="content__header">
+        <!-- <h3 class="content__title"></h3> -->
       </div>
       <div id="content__items" class="content__items"></div>
     </div>
-    <div class="content__showMore ">
-      <button id="show-more-btn" class="content__showMore__button">All products</button>
+    <div class="content__showMore" id="content__showMore">
+      <!-- <button id="show-more-btn" class="content__showMore__button">All products</button> -->
     </div>
     <div id="recommended" class="recommended"></div>
     <div class="newsletter" id="newsletter">

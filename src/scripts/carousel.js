@@ -4,6 +4,7 @@ import carouselImage from '../assets/carousel-item.png'
 import prevButton from '../assets/kz-long-arrow-left.png'
 import nextButton from '../assets/kz-long-arrow-right.png'
 export default function () {
+    document.getElementById('carousel').style.visibility = 'visible';
     const carouselItems = [
         {
             image: carouselImage,

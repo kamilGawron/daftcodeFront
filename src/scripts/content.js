@@ -3,29 +3,49 @@ import heartImage from '../assets/kz-heart.png'
 import products from './products'
 
 export default function () {
-    const showMoreBtn = document.getElementById('show-more-btn');
     const contentWrapper = document.getElementById('content__items');
+    // const showMoreBtn = document.getElementById('show-more-btn');
+
     const rowElem = document.createElement('div');
+
+    //new arrivals text
+    const contentHeaderWrapper = document.getElementById('content__header');
+    const headerTitleElem = document.createElement('h3');
+    headerTitleElem.classList.add('content__title');
+    headerTitleElem.innerHTML = 'New Arrivals';
+    contentHeaderWrapper.appendChild(headerTitleElem);
+    // end new arrivals
+
+    //show more btn
+    const showmoreBtnWrapper = document.getElementById('content__showMore');
+    const showMoreBtn = document.createElement('button');
+    showMoreBtn.id = 'show-more-btn';
+    showMoreBtn.classList.add('content__showMore__button');
+    showMoreBtn.innerHTML = 'Show more';
+    showmoreBtnWrapper.appendChild(showMoreBtn);
+
+
+    // end show more
     const newProductsEvent = new Event('newProducts');
 
     rowElem.classList.add('row');
     rowElem.classList.add('align-items-start');
 
-    let showItemsOnPage=8;
+    let showItemsOnPage = 8;
     let currentPage = 1;
-    const pagesCounter = Math.ceil(products().length/showItemsOnPage);
+    const pagesCounter = Math.ceil(products().length / showItemsOnPage);
 
-    showMoreBtn.onclick=()=>{
-        showProducts(currentPage*showItemsOnPage,(++currentPage*showItemsOnPage));
-        if(currentPage==pagesCounter){
-            document.getElementById('show-more-btn').style.display="none";
+    showMoreBtn.onclick = () => {
+        showProducts(currentPage * showItemsOnPage, (++currentPage * showItemsOnPage));
+        if (currentPage == pagesCounter) {
+            document.getElementById('show-more-btn').style.display = "none";
         }
         window.dispatchEvent(newProductsEvent);
     }
-    showProducts(currentPage-1,showItemsOnPage);
-    function showProducts(startIndex,endIndex) {
+    showProducts(currentPage - 1, showItemsOnPage);
+    function showProducts(startIndex, endIndex) {
 
-    let elements = products().slice(startIndex,endIndex);
+        let elements = products().slice(startIndex, endIndex);
         elements.forEach(element => {
             let colItem = document.createElement('div');
             colItem.classList.add('col-6');
@@ -74,7 +94,7 @@ export default function () {
             hoverDescIconWrapper.appendChild(heartIconElem);
             elemHoverOptions.appendChild(hoverDescIconWrapper);
             hoverInfoItem.appendChild(elemHoverOptions);
-    
+
             //element info
             if (element.info) {
                 let itemNameInfo = document.createElement('div');
@@ -82,7 +102,7 @@ export default function () {
                 itemNameInfo.innerHTML = element.info;
                 itemDescriptionItem.appendChild(itemNameInfo);
             }
-    
+
             //element name
             let itemNameElem = document.createElement('div');
             itemNameElem.classList.add('content__item__description__name');
@@ -98,7 +118,7 @@ export default function () {
             colItem.appendChild(hoverInfoItem);
             rowElem.appendChild(colItem);
         });
-    
+
         contentWrapper.appendChild(rowElem);
     }
 
