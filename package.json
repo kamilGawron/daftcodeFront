@@ -13,7 +13,7 @@
   "author": "KamilGawron",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "css-loader": "^3.5.2",
     "style-loader": "^1.1.3",
     "swiper": "^5.3.7"
